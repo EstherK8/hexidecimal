@@ -15,7 +15,7 @@ public class DecimalToHex {
         String hex = "";
 
 
-//        do while loop would work for any sized number but the while loop ensures a valid entry
+//        do while loop runs until every number is transfered to hex
         int quotient = number;
         do {
             int remainder = quotient % 16;
