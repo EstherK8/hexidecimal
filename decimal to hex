@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class DecimalToHex {
+
+
+    public static void main(String[] args) {
+        String[] hexNumbers = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"};
+
+        System.out.println("enter a number between 0 and 15");
+        Scanner num = new Scanner(System.in);
+
+        int number = num.nextInt();
+        System.out.println(number);
+
+        String hex = "";
+
+
+//        do while loop would work for any sized number but the while loop ensures a valid entry
+        int quotient = number;
+        do {
+            int remainder = quotient % 16;
+//            adds the remainder to the beginning of the hex
+            hex= hexNumbers[remainder]+ hex;
+            quotient = quotient / 16;
+
+            System.out.println(remainder + "remainder");
+
+        } while (quotient != 0);
+        System.out.println(hex);
+    }
+}
